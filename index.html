@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АПС Сочи - Placeholder</title>
+    
+    <!-- Подключение шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключение скриптов с отложенной загрузкой -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#hero" class="logo-placeholder"></a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#process">Этапы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary header-cta">Вызвать специалиста</a>
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Первый экран (Hero) -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content animate-on-scroll">
+                <div class="text-placeholder h1" style="max-width: 600px;"></div>
+                <div class="text-placeholder p" style="max-width: 500px;"></div>
+                <div class="text-placeholder p" style="max-width: 450px;"></div>
+                <a href="#contact" class="btn btn-primary cta-button-placeholder"></a>
+            </div>
+        </section>
+
+        <!-- Секция "О нас" с анимацией дождя -->
+        <section id="about" class="about-section">
+            <!-- Canvas для анимации будет здесь -->
+            <canvas id="rain-canvas"></canvas>
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text animate-on-scroll">
+                        <div class="text-placeholder h2"></div>
+                        <div class="text-placeholder p"></div>
+                        <div class="text-placeholder p"></div>
+                        <div class="text-placeholder p" style="width: 70%;"></div>
+                    </div>
+                    <div class="about-image animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Услуги" -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="text-placeholder h2" style="margin: 0 auto;"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="icon-placeholder"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p"></div>
+                        <div class="text-placeholder p" style="width: 80%;"></div>
+                    </div>
+                    <div class="service-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="icon-placeholder"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p"></div>
+                        <div class="text-placeholder p" style="width: 80%;"></div>
+                    </div>
+                    <div class="service-card animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="icon-placeholder"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p"></div>
+                        <div class="text-placeholder p" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Секция "Этапы работы" -->
+        <section id="process" class="process-section">
+             <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="text-placeholder h2" style="margin: 0 auto;"></div>
+                </div>
+                <div class="process-grid">
+                    <!-- Step 1 -->
+                    <div class="process-step animate-on-scroll">
+                        <div class="process-number"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
+                    </div>
+                     <!-- Step 2 -->
+                    <div class="process-step animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="process-number"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="process-step animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="process-number"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
+                    </div>
+                     <!-- Step 4 -->
+                    <div class="process-step animate-on-scroll" style="transition-delay: 0.3s;">
+                        <div class="process-number"></div>
+                        <div class="text-placeholder h3"></div>
+                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Подвал (Контакты) -->
+    <footer id="contact" class="site-footer">
+        <div class="container footer-content animate-on-scroll">
+            <div class="text-placeholder h2" style="margin: 0 auto 1rem;"></div>
+            <div class="text-placeholder p" style="max-width: 500px; margin: 0 auto 2rem;"></div>
+            <a href="#contact" class="btn btn-primary cta-button-placeholder"></a>
+            <div class="footer-contacts-placeholder">
+                <div class="text-placeholder" style="width: 150px; height: 24px;"></div>
+                <div class="text-placeholder" style="width: 180px; height: 24px;"></div>
+            </div>
+             <div class="text-placeholder" style="width: 250px; height: 16px; margin: 3rem auto 0;"></div>
+        </div>
+    </footer>
+
+</body>
+</html>
