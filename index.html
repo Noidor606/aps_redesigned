@@ -3,150 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>АПС Сочи - Placeholder</title>
-    
-    <!-- Подключение шрифта -->
+    <title>АПС Сочи - Системы автоматического полива</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Подключение стилей -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Подключение скриптов с отложенной загрузкой -->
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="#hero" class="logo-placeholder"></a>
+            <a href="#hero" class="logo-placeholder">
+                <img src="logo_aps.png" alt="Логотип АПС Сочи">
+            </a>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#about">О нас</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#process">Этапы</a></li>
+                    <li><a href="#pricing">Стоимость</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#about">О нас</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="btn btn-primary header-cta">Вызвать специалиста</a>
             <button class="burger-menu" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
     <main>
-        <!-- Первый экран (Hero) -->
         <section id="hero" class="hero-section">
             <div class="container hero-content animate-on-scroll">
-                <div class="text-placeholder h1" style="max-width: 600px;"></div>
-                <div class="text-placeholder p" style="max-width: 500px;"></div>
-                <div class="text-placeholder p" style="max-width: 450px;"></div>
-                <a href="#contact" class="btn btn-primary cta-button-placeholder"></a>
+                <h1>Автоматический полив в Сочи</h1>
+                <p class="lead">Создаем надежные системы автополива для вашего участка. Забудьте о шлангах и лейках — наслаждайтесь идеальным зеленым газоном, экономя ваше время и силы.</p>
+                <a href="#pricing" class="btn btn-primary">Рассчитать стоимость бесплатно</a>
             </div>
         </section>
 
-        <!-- Секция "О нас" с анимацией дождя -->
-        <section id="about" class="about-section">
-            <!-- Canvas для анимации будет здесь -->
-            <canvas id="rain-canvas"></canvas>
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text animate-on-scroll">
-                        <div class="text-placeholder h2"></div>
-                        <div class="text-placeholder p"></div>
-                        <div class="text-placeholder p"></div>
-                        <div class="text-placeholder p" style="width: 70%;"></div>
-                    </div>
-                    <div class="about-image animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="image-placeholder"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Секция "Услуги" -->
+        <!-- Остальные секции без изменений -->
+        <!-- ================= 1. Услуги (ЭЛЕГАНТНЫЙ СПИСОК) ================= -->
         <section id="services" class="services-section">
             <div class="container">
                 <div class="section-header animate-on-scroll">
-                    <div class="text-placeholder h2" style="margin: 0 auto;"></div>
+                    <h2>Наши услуги</h2>
+                    <p class="section-subtitle">Мы предоставляем полный спектр услуг — от первичной консультации и проектирования до монтажа, обслуживания и ремонта систем любой сложности.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="icon-placeholder"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p"></div>
-                        <div class="text-placeholder p" style="width: 80%;"></div>
+
+                <!-- Новый, элегантный список услуг -->
+                <div class="services-features-grid animate-on-scroll">
+                    
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Выезд специалиста на место для консультации</span>
                     </div>
-                    <div class="service-card animate-on-scroll" style="transition-delay: 0.1s;">
-                        <div class="icon-placeholder"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p"></div>
-                        <div class="text-placeholder p" style="width: 80%;"></div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Составление подробного плана системы автополива</span>
                     </div>
-                    <div class="service-card animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="icon-placeholder"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p"></div>
-                        <div class="text-placeholder p" style="width: 80%;"></div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Составление калькуляции</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Поставка комплектующих для монтажа</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Устройство капельного полива</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Монтажные работы и шеф-монтаж</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Гарантийное и послегарантийное обслуживание</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Консервация (расконсервация) системы</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                        <span>Ремонт и восстановление существующих систем</span>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Секция "Этапы работы" -->
-        <section id="process" class="process-section">
-             <div class="container">
-                <div class="section-header animate-on-scroll">
-                    <div class="text-placeholder h2" style="margin: 0 auto;"></div>
-                </div>
-                <div class="process-grid">
-                    <!-- Step 1 -->
-                    <div class="process-step animate-on-scroll">
-                        <div class="process-number"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
-                    </div>
-                     <!-- Step 2 -->
-                    <div class="process-step animate-on-scroll" style="transition-delay: 0.1s;">
-                        <div class="process-number"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
-                    </div>
-                     <!-- Step 3 -->
-                    <div class="process-step animate-on-scroll" style="transition-delay: 0.2s;">
-                        <div class="process-number"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
-                    </div>
-                     <!-- Step 4 -->
-                    <div class="process-step animate-on-scroll" style="transition-delay: 0.3s;">
-                        <div class="process-number"></div>
-                        <div class="text-placeholder h3"></div>
-                        <div class="text-placeholder p" style="width: 90%; margin: 0 auto;"></div>
-                    </div>
+
+                <!-- Кнопка заказа осталась прежней -->
+                <div class="services-cta animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary">Рассчитать стоимость</a>
                 </div>
             </div>
         </section>
+
+        <section id="pricing" class="pricing-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="pricing-placeholder animate-on-scroll"></div></div></section>
+        <section id="gallery" class="gallery-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="gallery-grid"><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div><div class="gallery-item animate-on-scroll"><div class="image-placeholder"></div></div></div></div></section>
+        <section id="process" class="process-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="process-grid"><div class="process-step animate-on-scroll"><div class="process-number"></div><div class="text-placeholder h3"></div></div><div class="process-step animate-on-scroll"><div class="process-number"></div><div class="text-placeholder h3"></div></div><div class="process-step animate-on-scroll"><div class="process-number"></div><div class="text-placeholder h3"></div></div><div class="process-step animate-on-scroll"><div class="process-number"></div><div class="text-placeholder h3"></div></div></div></div></section>
+        <section id="about" class="about-section"><div class="container"><div class="about-grid"><div class="about-text animate-on-scroll"><div class="text-placeholder h2"></div><div class="text-placeholder p"></div></div><div class="about-image animate-on-scroll"><div class="image-placeholder"></div></div></div></div></section>
+        <section id="tech" class="tech-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="tech-logos animate-on-scroll"><div class="logo-item-placeholder"></div><div class="logo-item-placeholder"></div><div class="logo-item-placeholder"></div><div class="logo-item-placeholder"></div><div class="logo-item-placeholder"></div></div></div></section>
+        <section id="reviews" class="reviews-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="reviews-grid"><div class="review-card animate-on-scroll"><div class="text-placeholder p"></div></div><div class="review-card animate-on-scroll"><div class="text-placeholder p"></div></div><div class="review-card animate-on-scroll"><div class="text-placeholder p"></div></div></div></div></section>
+        <section id="docs" class="docs-section"><div class="container"><div class="section-header animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto;"></div></div><div class="docs-grid"><div class="doc-item-placeholder animate-on-scroll"></div><div class="doc-item-placeholder animate-on-scroll"></div></div></div></section>
     </main>
-    
-    <!-- Подвал (Контакты) -->
-    <footer id="contact" class="site-footer">
-        <div class="container footer-content animate-on-scroll">
-            <div class="text-placeholder h2" style="margin: 0 auto 1rem;"></div>
-            <div class="text-placeholder p" style="max-width: 500px; margin: 0 auto 2rem;"></div>
-            <a href="#contact" class="btn btn-primary cta-button-placeholder"></a>
-            <div class="footer-contacts-placeholder">
-                <div class="text-placeholder" style="width: 150px; height: 24px;"></div>
-                <div class="text-placeholder" style="width: 180px; height: 24px;"></div>
-            </div>
-             <div class="text-placeholder" style="width: 250px; height: 16px; margin: 3rem auto 0;"></div>
-        </div>
-    </footer>
+    <footer id="contact" class="site-footer"><div class="container footer-content animate-on-scroll"><div class="text-placeholder h2" style="margin: 0 auto 1rem;"></div><div class="footer-contacts-placeholder"><div class="text-placeholder"></div><div class="text-placeholder"></div></div><div class="copyright-placeholder text-placeholder"></div></div></footer>
 
 </body>
 </html>
