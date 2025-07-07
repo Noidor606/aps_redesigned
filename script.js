@@ -1,4 +1,52 @@
+// --- ОСНОВНОЙ КОД САЙТА ---
 document.addEventListener('DOMContentLoaded', () => {
+
+/**
+ * ГЕНЕРАТОР ДИНАМИЧЕСКОГО ФОНА (ВАША ВЕРСИЯ)
+ */
+function createDynamicBackground() {
+    const backgroundContainer = document.getElementById('dynamic-background');
+    if (!backgroundContainer) return;
+
+    backgroundContainer.innerHTML = '';
+
+    // --- НАСТРОЙКИ (ВАШИ ОРИГИНАЛЬНЫЕ) ---
+    const iconFiles = [ 'icon1.png', 'icon2.png', 'icon3.png', 'icon4.png', 'icon5.png', 'icon6.png', 'icon7.png', 'icon8.png', 'icon9.png', 'icon10.png', 'icon11.png', 'icon12.png', 'icon14.png', 'icon15.png', 'icon16.png', 'icon17.png' ];
+    const iconCount = 800; // Твое количество
+    // -----------------
+
+    for (let i = 0; i < iconCount; i++) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'bg-icon-wrapper';
+        const img = document.createElement('img');
+        img.className = 'bg-icon';
+
+        // --- ПРИМЕНЯЕМ РАНДОМ (ВАШИ ОРИГИНАЛЬНЫЕ НАСТРОЙКИ) ---
+        const randomIcon = iconFiles[Math.floor(Math.random() * iconFiles.length)];
+        const randomSize = Math.random() * 8 + 30; // Твой диапазон 30-38px
+        const randomAngle = Math.random() * 30 - 15; // Твой диапазон наклона
+        const randomOpacity = Math.random() * 0.0072 + 0.072; // Твоя прозрачность
+
+        img.src = randomIcon;
+        img.style.width = `${randomSize}px`;
+        img.style.height = `${randomSize}px`;
+        img.style.transform = `rotate(${randomAngle}deg)`;
+        img.style.opacity = randomOpacity;
+
+        wrapper.appendChild(img);
+        backgroundContainer.appendChild(wrapper);
+    }
+}
+    // Запускаем генератор фона
+    createDynamicBackground();
+
+    // Перегенерировать фон при изменении размера окна
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(createDynamicBackground, 250);
+    });
+
     // --- ЖЕЛЕЗНЫЙ ФИКС СКРОЛЛА ПРИ ЗАГРУЗКЕ ---
     if (history.scrollRestoration) {
         history.scrollRestoration = 'manual';
@@ -11,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- ЛОГИКА ШАПКИ ---
     const header = document.querySelector('.site-header');
-    const heroSection = document.querySelector('#hero');
-    if (header && heroSection) {
+    if (header) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
@@ -23,9 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             },
-            { rootMargin: `-${header.offsetHeight}px 0px 0px 0px` }
+            { rootMargin: `-80px 0px 0px 0px` }
         );
-        observer.observe(heroSection);
+        const heroSection = document.querySelector('#hero');
+        if (heroSection) {
+            observer.observe(heroSection);
+        }
     }
 
     // --- ПЛАВНЫЙ СКРОЛЛ ---
@@ -56,8 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                burger.classList.remove('open');
+                if (nav.classList.contains('open')) {
+                    nav.classList.remove('open');
+                    burger.classList.remove('open');
+                }
             });
         });
     }
