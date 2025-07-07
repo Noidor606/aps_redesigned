@@ -12,7 +12,7 @@ function createDynamicBackground() {
 
     // --- НАСТРОЙКИ (ВАШИ ОРИГИНАЛЬНЫЕ) ---
     const iconFiles = [ 'icon1.png', 'icon2.png', 'icon3.png', 'icon4.png', 'icon5.png', 'icon6.png', 'icon7.png', 'icon8.png', 'icon9.png', 'icon10.png', 'icon11.png', 'icon12.png', 'icon14.png', 'icon15.png', 'icon16.png', 'icon17.png' ];
-    const iconCount = 800; // Твое количество
+    const iconCount = 1750; // Твое количество
     // -----------------
 
     for (let i = 0; i < iconCount; i++) {
