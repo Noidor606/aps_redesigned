@@ -2,7 +2,7 @@
    ГЛОБАЛЬНЫЕ СТИЛИ И ПЕРЕМЕННЫЕ
    ======================================== */
 :root {
-    --bg-main: #fdfaf6;
+    --bg-main: hsl(57, 100%, 96%)
     --bg-alt: #ffffff;
     --accent-blue: #3498db;
     --accent-green: #2ecc71;
